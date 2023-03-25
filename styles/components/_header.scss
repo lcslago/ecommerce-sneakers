@@ -1,0 +1,19 @@
+@use "../abstract/variables";
+
+.product-page__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 1.5rem 1rem;
+    position: sticky;
+    .header__hamburger-menu,
+    .header__logo,
+    .header__cart {
+        pointer-events: none;
+        margin: 0 .5rem;
+    }
+    .header__avatar {
+        width: 25px;
+        margin: 0 .5rem;
+    }
+}

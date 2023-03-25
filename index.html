@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="assets/icons/sneakers.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sneakers</title>
+</head>
+<body class="product-page">
+    <header class="product-page__header">
+        <nav class="header__left">
+            <img class="header__hamburger-menu" src="/assets/icons/icon-menu.svg" alt="Acesso ao menu">
+            <img class="header__logo" src="/assets/icons/logo.svg" alt="Logo da Sneakers">
+        </nav>
+        <nav class="header__right">
+            <img class="header__cart" src="/assets/icons/icon-cart.svg" alt="Carrinho de compras" >
+            <img class="header__avatar" src="/assets/img/image-avatar.png" alt="Avatar do usuário" >
+        </nav>
+    </header>
+    <main class="product-page__main">
+        <div class="product-page__main-gallery">
+            <div class="main-gallery__row">
+                <div class="main-gallery__column">
+                    <img src="/assets/img/image-product-1-thumbnail.jpg" alt="Imagem do produto" class="hover-shadow">
+                </div>
+                <div class="main-gallery__column">
+                    <img src="" alt="" class="hover-shadow">
+                </div>
+                <div class="main-gallery__column">
+                    <img src="" alt="" class="hover-shadow">
+                </div>
+                <div class="main-gallery__column">
+                    <img src="" alt="" class="hover-shadow">
+                </div>
+            </div>
+
+            <div id="modal" class="product-page__main-modal">
+                <span class="close cursor"></span>
+                <div class="main-modal__content">
+                    <div class="main-modal__content-slide slide-alt">
+                        <img src="/assets/img/image-product-1.jpg" alt="Primeira imagem do produto">
+                    </div>
+                    <div class="main-modal__content-slide">
+                        <img src="/assets/img/image-product-2.jpg" alt="Segunda imagem do produto">
+                    </div>
+                    <div class="main-modal__content-slide">
+                        <img src="/assets/img/image-product-3.jpg" alt="Terceira imagem do produto">
+                    </div>
+                    <div class="main-modal__content-slide">
+                        <img src="/assets/img/image-product-4.jpg" alt="Quarta imagem do produto">
+                    </div>
+                </div>
+
+                <a class="product-page__main-gallery--prev" onclick="plusSlides(-1)"><img src="assets/icons/icon-previous.svg" alt="Voltar para imagem anterior"></a>
+                <a class="product-page__main-gallery--next" onclick="plusSlides(1)"><img src="assets/icons/icon-next.svg" alt="Avançar para próxima página"></a>
+
+                <div class="main-gallery__column">
+                    <img src="/assets/img/image-product-1-thumbnail.jpg" alt="Imagem do produto" class="demo">
+                </div>
+            </div>
+        </div>
+
+        <section class="product-page__main-description">
+            <h5>Sneaker Company</h5>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p>
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+            </p>
+            <div class="main-description__price">
+                <div class="main-description__price-discount">
+                    <h2>$125.00</h2>
+                    <h5>50%</h5>
+                </div>
+                <div class="main-description__price-old">
+                    <h5>$250.00</h5>
+                </div>
+            </div>
+        </section>
+
+        <script src="scripts/lightbox.js"></script>
+    </main>
+    <footer></footer>
+</body>
+</html>

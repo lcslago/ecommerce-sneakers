@@ -1,0 +1,123 @@
+.product-page {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.product-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 1.5rem 1rem;
+  position: sticky;
+}
+.product-page__header .header__hamburger-menu,
+.product-page__header .header__logo,
+.product-page__header .header__cart {
+  pointer-events: none;
+  margin: 0 0.5rem;
+}
+.product-page__header .header__avatar {
+  width: 25px;
+  margin: 0 0.5rem;
+}
+
+.product-page__main-gallery .main-gallery__row {
+  display: none;
+}
+.product-page__main-gallery .main-gallery__column {
+  display: none;
+}
+.product-page__main-modal .main-modal__content {
+  position: relative;
+}
+.product-page__main-modal .main-modal__content-slide {
+  display: none;
+}
+.product-page__main-modal .main-modal__content-slide img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product-page__main-modal .main-modal__content-slide:nth-child(2) img, .product-page__main-modal .main-modal__content-slide:nth-child(3) img, .product-page__main-modal .main-modal__content-slide:nth-child(4) img {
+  -o-object-position: top;
+     object-position: top;
+}
+.product-page__main-modal .main-modal__content .slide-alt {
+  display: block;
+}
+.product-page__main-modal .product-page__main-gallery--prev,
+.product-page__main-modal .product-page__main-gallery--next {
+  position: absolute;
+  top: 190px;
+  margin: 0 1rem;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 100%);
+}
+.product-page__main-modal .product-page__main-gallery--prev img,
+.product-page__main-modal .product-page__main-gallery--next img {
+  width: 13px;
+  height: 18px;
+}
+.product-page__main-modal .product-page__main-gallery--next {
+  right: 0;
+  padding: 0.6rem 0.7rem 0.6rem 0.9rem;
+}
+.product-page__main-modal .product-page__main-gallery--prev {
+  left: 0;
+  padding: 0.6rem 0.9rem 0.6rem 0.7rem;
+}
+
+.product-page__main-description h1,
+.product-page__main-description h5 {
+  font-weight: 700;
+}
+.product-page__main-description h5,
+.product-page__main-description p {
+  padding: 1.5rem 1rem 0.5rem 1rem;
+}
+.product-page__main-description h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  color: hsl(26, 100%, 55%);
+}
+.product-page__main-description h1 {
+  font-size: 2rem;
+  padding: 0 1rem;
+  line-height: 2.7rem;
+  color: hsl(220, 13%, 13%);
+}
+.product-page__main-description p {
+  line-height: 1.7rem;
+  color: hsl(219, 9%, 45%);
+}
+.product-page__main-description .main-description__price {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: center;
+}
+.product-page__main-description .main-description__price-discount {
+  display: flex;
+  align-items: center;
+}
+.product-page__main-description .main-description__price-discount h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(220, 13%, 13%);
+}
+.product-page__main-description .main-description__price-discount h5 {
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: hsl(25, 100%, 94%);
+  border-radius: 5px;
+}
+.product-page__main-description .main-description__price-old h5 {
+  padding: 0;
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  color: hsl(220, 14%, 75%);
+}/*# sourceMappingURL=style.css.map */
