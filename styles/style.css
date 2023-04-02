@@ -9,7 +9,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem 1.5rem 1rem;
-  position: sticky;
 }
 .product-page__header .header__hamburger-menu,
 .product-page__header .header__logo,
@@ -20,6 +19,22 @@
 .product-page__header .header__avatar {
   width: 25px;
   margin: 0 0.5rem;
+}
+.product-page__header .header__right .header__cart-count {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 3.5rem;
+  margin-top: 0.8rem;
+  background-color: hsl(26, 100%, 55%);
+  padding: 0.1rem 0;
+  width: 25px;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  display: none;
 }
 
 .product-page__main-gallery .main-gallery__row {
@@ -120,4 +135,61 @@
   font-size: 1.2rem;
   text-decoration: line-through;
   color: hsl(220, 14%, 75%);
+}
+
+.product-page__cart-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  margin: 1rem 0;
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 15px;
+}
+.product-page__cart-counter img {
+  width: 15px;
+  height: 15px;
+  padding: 0.5rem;
+}
+.product-page__cart-counter img:first-child {
+  height: 5px;
+}
+.product-page__cart-counter img:hover {
+  filter: brightness(150%);
+  cursor: pointer;
+}
+.product-page__cart-counter p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.product-page__cart {
+  margin: 0 1rem;
+}
+.product-page__cart .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 7rem auto;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  width: 100%;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0px 35px 90px -20px hsl(26, 100%, 55%);
+}
+.product-page__cart .button img {
+  filter: brightness(1000%);
+  width: 20px;
+}
+.product-page__cart .button:hover {
+  background-color: hsl(26, 97%, 64%);
+  cursor: pointer;
+}
+.product-page__cart .button:active {
+  background-color: hsl(26, 100%, 55%);
 }/*# sourceMappingURL=style.css.map */

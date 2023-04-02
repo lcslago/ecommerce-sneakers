@@ -1,4 +1,4 @@
-function controlSlide () {
+function controlSlide() {
     let prev = document.querySelector(".product-page__main-gallery--prev");
     let next = document.querySelector(".product-page__main-gallery--next");
 
@@ -23,7 +23,7 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-  slides[slideIndex-1].style.display = "block";
+    slides[slideIndex - 1].style.display = "block";
 }
 
 function plusSlides(n) {

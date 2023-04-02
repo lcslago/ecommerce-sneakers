@@ -1,0 +1,36 @@
+@use '../abstract/variables';
+
+.product-page__cart {
+    margin: 0 1rem;
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 7rem auto;
+        gap: 1rem;
+        padding: 1.5rem 0;
+        width: 100%;
+        background-color: variables.$primary-color;
+        color: variables.$first-basic-color;
+        border: none;
+        border-radius: 15px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        box-shadow: 0px 35px 90px -20px variables.$primary-color;
+
+        img {
+            filter: brightness(1000%);
+            width: 20px;
+        }
+
+        &:hover {
+            background-color: variables.$primary-color-hover;
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: variables.$primary-color;
+        }
+    }
+}

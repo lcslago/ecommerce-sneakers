@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Sneakers</title>
 </head>
+
 <body class="product-page">
     <header class="product-page__header">
         <nav class="header__left">
@@ -19,8 +21,9 @@
             <img class="header__logo" src="/assets/icons/logo.svg" alt="Logo da Sneakers">
         </nav>
         <nav class="header__right">
-            <img class="header__cart" src="/assets/icons/icon-cart.svg" alt="Carrinho de compras" >
-            <img class="header__avatar" src="/assets/img/image-avatar.png" alt="Avatar do usuário" >
+            <img class="header__cart" src="/assets/icons/icon-cart.svg" alt="Carrinho de compras">
+            <span class="header__cart-count">0</span>
+            <img class="header__avatar" src="/assets/img/image-avatar.png" alt="Avatar do usuário">
         </nav>
     </header>
     <main class="product-page__main">
@@ -57,8 +60,10 @@
                     </div>
                 </div>
 
-                <a class="product-page__main-gallery--prev"><img src="assets/icons/icon-previous.svg" alt="Voltar para imagem anterior"></a>
-                <a class="product-page__main-gallery--next"><img src="assets/icons/icon-next.svg" alt="Avançar para próxima página"></a>
+                <a class="product-page__main-gallery--prev"><img src="assets/icons/icon-previous.svg"
+                        alt="Voltar para imagem anterior"></a>
+                <a class="product-page__main-gallery--next"><img src="assets/icons/icon-next.svg"
+                        alt="Avançar para próxima página"></a>
 
                 <div class="main-gallery__column">
                     <img src="/assets/img/image-product-1-thumbnail.jpg" alt="Imagem do produto" class="demo">
@@ -70,7 +75,8 @@
             <h5>Sneaker Company</h5>
             <h1>Fall Limited Edition Sneakers</h1>
             <p>
-                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
+                sole, they'll withstand everything the weather can offer.
             </p>
             <div class="main-description__price">
                 <div class="main-description__price-discount">
@@ -83,8 +89,20 @@
             </div>
         </section>
 
+        <div class="product-page__cart">
+            <div class="product-page__cart-counter">
+                <img class="cart-counter--minus" src="assets/icons/icon-minus.svg" alt="Remover uma unidade">
+                <p class="cart-counter__number">0</p>
+                <img class="cart-counter--plus" src="assets/icons/icon-plus.svg" alt="Adicionar uma unidade">
+            </div>
+            <button class="button"><img src="assets/icons/icon-cart.svg">Add to cart</button>
+        </div>
+
+
+        <script src="scripts/cart.js"></script>
         <script src="scripts/lightbox.js"></script>
     </main>
     <footer></footer>
 </body>
+
 </html>

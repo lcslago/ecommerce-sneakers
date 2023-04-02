@@ -5,15 +5,35 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem 1.5rem 1rem;
-    position: sticky;
+
     .header__hamburger-menu,
     .header__logo,
     .header__cart {
         pointer-events: none;
         margin: 0 .5rem;
     }
+
     .header__avatar {
         width: 25px;
         margin: 0 .5rem;
+    }
+
+    .header__right {
+        .header__cart-count {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-right: 3.5rem;
+            margin-top: .8rem;
+            background-color: variables.$primary-color;
+            padding: .1rem 0;
+            width: 25px;
+            text-align: center;
+            font-size: .8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            color: variables.$first-basic-color;
+            display: none;
+        }
     }
 }
