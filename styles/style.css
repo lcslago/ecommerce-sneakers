@@ -187,7 +187,7 @@
   width: 20px;
 }
 .product-page__cart .button:hover {
-  background-color: hsl(26, 97%, 64%);
+  background-color: hsl(26, 97%, 59%);
   cursor: pointer;
 }
 .product-page__cart .button:active {
