@@ -21,10 +21,38 @@
             <img class="header__logo" src="/assets/icons/logo.svg" alt="Logo da Sneakers">
         </nav>
         <nav class="header__right">
-            <img class="header__cart" src="/assets/icons/icon-cart.svg" alt="Carrinho de compras">
-            <span class="header__cart-count">0</span>
-            <img class="header__avatar" src="/assets/img/image-avatar.png" alt="Avatar do usuário">
+            <nav class="header__cart">
+                <nav class="header__cart--menu">
+                    <img class="header__cart-img" id="cart" src="/assets/icons/icon-cart.svg" alt="Carrinho de compras">
+                    <span class="header__cart-count">0</span>
+                    <ul class="header__cart-items">
+                        <li class="header__cart-product">
+                            <nav class="cart-product__left">
+                                <span class="item__name">product</span>
+
+                            </nav>
+                            <nav class="cart-product__right">
+                                <span class="item__price">price</span>
+                                <span class="item__quantity">quantity</span>
+
+                            </nav>
+                            <img class="header__cart-product--delete" src="assets/icons/icon-delete.svg"
+                                alt="Remover item do carrinho">
+                        </li>
+                        <nav class="cart__overview">
+                            <span>Total:</span>
+                            <span class="cart__total--sum">0</span>
+                        </nav>
+                    </ul>
+
+                </nav>
+            </nav>
+            <nav>
+                <img class="header__avatar" src="/assets/img/image-avatar.png" alt="Avatar do usuário">
+            </nav>
+
         </nav>
+
     </header>
     <main class="product-page__main">
         <div class="product-page__main-gallery">
@@ -73,14 +101,14 @@
 
         <section class="product-page__main-description">
             <h5>Sneaker Company</h5>
-            <h1>Fall Limited Edition Sneakers</h1>
+            <h1 class="product-name">Fall Limited Edition Sneakers</h1>
             <p>
                 These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
                 sole, they'll withstand everything the weather can offer.
             </p>
             <div class="main-description__price">
                 <div class="main-description__price-discount">
-                    <h2>$125.00</h2>
+                    <h2 class="product-price">125.00</h2>
                     <h5>50%</h5>
                 </div>
                 <div class="main-description__price-old">

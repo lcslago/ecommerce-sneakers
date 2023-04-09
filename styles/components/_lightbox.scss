@@ -1,24 +1,31 @@
 @use "../abstract/variables";
 
 .product-page__main {
+    margin-top: 4.2rem;
+
     &-gallery {
         .main-gallery__row {
             display: none;
         }
+
         .main-gallery__column {
             display: none;
         }
     }
+
     &-modal {
         .main-modal__content {
             position: relative;
+
             &-slide {
                 display: none;
+
                 img {
                     width: 100%;
                     height: 300px;
                     object-fit: cover;
                 }
+
                 &:nth-child(2),
                 &:nth-child(3),
                 &:nth-child(4) {
@@ -27,6 +34,7 @@
                     }
                 }
             }
+
             .slide-alt {
                 display: block;
             }
@@ -39,18 +47,20 @@
             margin: 0 1rem;
             border-radius: 50%;
             background-color: variables.$first-basic-color;
-            
+
             img {
                 width: 13px;
                 height: 18px;
             }
-            
+
         }
+
         .product-page__main-gallery--next {
             right: 0;
             padding: .6rem .7rem .6rem .9rem;
 
         }
+
         .product-page__main-gallery--prev {
             left: 0;
             padding: .6rem .9rem .6rem .7rem;

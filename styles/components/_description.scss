@@ -1,26 +1,31 @@
 @use "../abstract/variables";
 
 .product-page__main-description {
-    h1,
+
+    .product-name,
     h5 {
         font-weight: 700;
     }
+
     h5,
     p {
         padding: 1.5rem 1rem .5rem 1rem;
     }
+
     h5 {
         text-transform: uppercase;
         letter-spacing: .1rem;
         font-size: .8rem;
         color: variables.$primary-color;
     }
-    h1 {
+
+    .product-name {
         font-size: 2rem;
         padding: 0 1rem;
         line-height: 2.7rem;
         color: variables.$secondary-color-darker;
     }
+
     p {
         line-height: 1.7rem;
         color: variables.$secondary-color;
@@ -31,14 +36,21 @@
         justify-content: space-between;
         padding: 0 1rem;
         align-items: center;
+
         &-discount {
             display: flex;
             align-items: center;
+
             h2 {
                 font-size: 2rem;
                 font-weight: 700;
                 color: variables.$secondary-color-darker;
             }
+
+            .product-price::before {
+                content: "$";
+            }
+
             h5 {
                 margin: 1rem;
                 padding: .5rem;
@@ -47,6 +59,7 @@
                 border-radius: 5px;
             }
         }
+
         &-old {
             h5 {
                 padding: 0;
