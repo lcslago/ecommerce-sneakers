@@ -60,6 +60,38 @@
             padding: .5rem 0;
             box-shadow: 15px 15px 15px -15px variables.$second-basic-color;
 
+            .header__cart-empty {
+                display: grid;
+                grid-template-rows: 70%;
+                height: 100%;
+                width: 300px;
+                background-image: url(../../assets/icons/icon-cart.svg);
+                background-repeat: no-repeat;
+                background-size: 25%;
+                background-position: top;
+
+
+                span,
+                p {
+                    text-align: center;
+                    align-self: end;
+                    justify-self: center;
+                    padding: 0 2rem 0 2rem;
+                }
+
+                span {
+                    padding-bottom: 1rem;
+                    font-weight: 700;
+                    color: variables.$secondary-color-darker;
+                }
+
+                p {
+                    padding-bottom: 2.5rem;
+                    color: variables.$secondary-color;
+                    line-height: 1.3rem;
+                }
+            }
+
             .header__cart-product {
                 display: flex;
                 justify-content: right;

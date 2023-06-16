@@ -70,3 +70,30 @@
         }
     }
 }
+
+.product-page__main {
+    @media screen {
+        @media (min-width: variables.$desktop-width) {
+            display: flex;
+            justify-content: space-between;
+            padding: 2.5rem 10rem 0 10rem;
+
+            .product-page__cart {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .product-page__main__left-container {
+                width: 50%;
+
+                .product-page__main-description {
+                    .main-description__price {
+                        flex-direction: column;
+                        align-items: start;
+                    }
+                }
+            }
+        }
+    }
+}

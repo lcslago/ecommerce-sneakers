@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <title>Sneakers</title>
+    <title>Fall Limited Edition Sneakers - Sneakers</title>
 </head>
 
 <body class="product-page">
@@ -25,7 +25,11 @@
                 <nav class="header__cart--menu">
                     <img class="header__cart-img" id="cart" src="/assets/icons/icon-cart.svg" alt="Carrinho de compras">
                     <span class="header__cart-count">0</span>
-                    <ul class="header__cart-items">
+                    <ul class="header__cart-items" id="cartmenu">
+                        <div class="header__cart-empty">
+                            <span>Your cart is empty</span>
+                            <p>Looks like you have added anything to you cart yet.</p>
+                        </div>
                         <li class="header__cart-product">
                             <nav class="cart-product__left">
                                 <span class="item__name">product</span>
@@ -36,7 +40,7 @@
                                 <span class="item__quantity">quantity</span>
 
                             </nav>
-                            <img class="header__cart-product--delete" src="assets/icons/icon-delete.svg"
+                            <img class="header__cart-product--delete" id="delete" src="assets/icons/icon-delete.svg"
                                 alt="Remover item do carrinho">
                         </li>
                         <nav class="cart__overview">
@@ -99,35 +103,37 @@
             </div>
         </div>
 
-        <section class="product-page__main-description">
-            <h5>Sneaker Company</h5>
-            <h1 class="product-name">Fall Limited Edition Sneakers</h1>
-            <p>
-                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
-                sole, they'll withstand everything the weather can offer.
-            </p>
-            <div class="main-description__price">
-                <div class="main-description__price-discount">
-                    <h2 class="product-price">125.00</h2>
-                    <h5>50%</h5>
+        <div class="product-page__main__left-container">
+            <section class="product-page__main-description">
+                <h5>Sneaker Company</h5>
+                <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+                <p>
+                    These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
+                    sole, they'll withstand everything the weather can offer.
+                </p>
+                <div class="main-description__price">
+                    <div class="main-description__price-discount">
+                        <h2 class="product-price">125.00</h2>
+                        <h5>50%</h5>
+                    </div>
+                    <div class="main-description__price-old">
+                        <h5>$250.00</h5>
+                    </div>
                 </div>
-                <div class="main-description__price-old">
-                    <h5>$250.00</h5>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <div class="product-page__cart">
-            <div class="product-page__cart-counter">
-                <img class="cart-counter--minus" src="assets/icons/icon-minus.svg" alt="Remover uma unidade">
-                <p class="cart-counter__number">0</p>
-                <img class="cart-counter--plus" src="assets/icons/icon-plus.svg" alt="Adicionar uma unidade">
+            <div class="product-page__cart">
+                <div class="product-page__cart-counter">
+                    <img class="cart-counter--minus" src="assets/icons/icon-minus.svg" alt="Remover uma unidade">
+                    <p class="cart-counter__number">0</p>
+                    <img class="cart-counter--plus" src="assets/icons/icon-plus.svg" alt="Adicionar uma unidade">
+                </div>
+                <button class="button"><img src="assets/icons/icon-cart.svg">Add to cart</button>
             </div>
-            <button class="button"><img src="assets/icons/icon-cart.svg">Add to cart</button>
         </div>
 
-        <script src="scripts/cart.js"></script>
-        <script src="scripts/lightbox.js"></script>
+        <script src="./js/cart.js"></script>
+        <script src="./js/lightbox.js"></script>
     </main>
     <footer></footer>
 </body>

@@ -28,4 +28,12 @@
         font-size: 1.2rem;
         font-weight: 700;
     }
+
+    @media screen {
+        @media (min-width: variables.$desktop-width) {
+            padding: 0;
+            margin: 0;
+            gap: 2rem;
+        }
+    }
 }

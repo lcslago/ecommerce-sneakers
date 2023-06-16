@@ -65,5 +65,15 @@
             left: 0;
             padding: .6rem .9rem .6rem .7rem;
         }
+
+        @media screen {
+            @media (min-width: variables.$desktop-width) {
+
+                .product-page__main-gallery--next,
+                .product-page__main-gallery--prev {
+                    display: none;
+                }
+            }
+        }
     }
 }

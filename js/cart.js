@@ -2,8 +2,6 @@ const productName = document.querySelector(".product-name").innerHTML;
 
 const productPrice = document.querySelector(".product-price").innerHTML;
 
-// const productValue = parseInt(document.querySelector(".product-price__value").innerHTML);
-
 let minus = document.querySelector(".cart-counter--minus");
 
 let plus = document.querySelector(".cart-counter--plus");
@@ -17,6 +15,8 @@ let counterNotification = document.querySelector(".header__cart-count");
 const cartButton = document.querySelector("#cart");
 
 const cartMenu = document.querySelector(".header__cart-items");
+
+const cartEmpty = document.querySelector(".header__cart-empty");
 
 const cartProductlist = document.querySelector(".header__cart-product");
 
@@ -61,6 +61,7 @@ function buttonCart() {
             counterNotification.style.display = "none";
             cartProductlist.style.display = "none";
             cartOverview.style.display = "none"
+            cartEmpty.style.display = "grid";
         } else {
             counterNotification.style.display = "block";
             document.querySelector(".header__cart-count").innerHTML = cartNumber;
@@ -97,9 +98,15 @@ function saveCartNumber() {
 }
 
 function showCartMenu() {
-    cartButton.addEventListener("click", () => {
-        cartMenu.classList.toggle("show");
-    });
+    document.addEventListener("click", (e) => {
+        if (e.target.matches('#cart')) {
+            cartMenu.classList.toggle("show");
+        } else if (e.target.closest('#cartmenu')) {
+            cartMenu.classList.add("show");
+        } else {
+            cartMenu.classList.remove("show");
+        }
+    })
 }
 
 function showCartItem() {
@@ -109,6 +116,7 @@ function showCartItem() {
     document.querySelector(".item__quantity").innerHTML = number;
 
     if (number > 0) {
+        cartEmpty.style.display = "none";
         cartProductlist.style.display = "flex";
         cartOverview.style.display = "block";
         totalSum = document.querySelector(".cart__total--sum").innerHTML = `$${parseFloat(productPrice * number).toFixed(2)}`;
@@ -125,5 +133,6 @@ function deleteCart() {
         cartProductlist.style.display = "none";
         counterNotification.style.display = "none";
         cartOverview.style.display = "none";
+        cartEmpty.style.display = "grid";
     })
 }
