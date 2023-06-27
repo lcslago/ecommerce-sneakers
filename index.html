@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="assets/icons/sneakers.png">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/icons/sneakers.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -17,13 +17,14 @@
 <body class="product-page" data-body>
     <header class="product-page__header">
         <nav class="header__left">
-            <img class="header__hamburger-menu" src="/assets/icons/icon-menu.svg" alt="Acesso ao menu">
-            <img class="header__logo" src="/assets/icons/logo.svg" alt="Logo da Sneakers">
+            <img class="header__hamburger-menu" src="./assets/icons/icon-menu.svg" alt="Acesso ao menu">
+            <img class="header__logo" src="./assets/icons/logo.svg" alt="Logotipo da Sneakers">
         </nav>
         <nav class="header__right">
             <nav class="header__cart">
                 <nav class="header__cart--menu">
-                    <img class="header__cart-img" id="cart" src="/assets/icons/icon-cart.svg" alt="Carrinho de compras">
+                    <img class="header__cart-img" id="cart" src="./assets/icons/icon-cart.svg"
+                        alt="Verificar conteúdos do carrinho de compras">
                     <span class="header__cart-count">0</span>
                     <ul class="header__cart-items" id="cartmenu">
                         <div class="header__cart-empty">
@@ -40,7 +41,7 @@
                                 <span class="item__quantity">quantity</span>
 
                             </nav>
-                            <img class="header__cart-product--delete" id="delete" src="assets/icons/icon-delete.svg"
+                            <img class="header__cart-product--delete" id="delete" src="./assets/icons/icon-delete.svg"
                                 alt="Remover item do carrinho">
                         </li>
                         <nav class="cart__overview">
@@ -52,7 +53,7 @@
                 </nav>
             </nav>
             <nav>
-                <img class="header__avatar" src="/assets/img/image-avatar.png" alt="Avatar do usuário">
+                <img class="header__avatar" src="./assets/img/image-avatar.png" alt="Avatar do usuário">
             </nav>
 
         </nav>
@@ -60,19 +61,24 @@
     </header>
     <main class="product-page__main">
         <div class="product-page__main-gallery">
-            <img src="./assets/img/image-product-1.jpg" alt="Imagem do produto">
+            <img src="./assets/img/image-product-1.jpg"
+                alt="Galeria do produto, um par de sapatos com sola branca sobre um fundo laranja.">
             <div class="main-gallery__row">
                 <div class="main-gallery__column">
-                    <img src="./assets/img/image-product-1-thumbnail.jpg" alt="Imagem do produto" class="hover-shadow">
+                    <img src="./assets/img/image-product-1-thumbnail.jpg" alt="Ampliar primeiro item da galeria."
+                        class="hover-shadow">
                 </div>
                 <div class="main-gallery__column">
-                    <img src="./assets/img/image-product-2-thumbnail.jpg" alt="" class="hover-shadow">
+                    <img src="./assets/img/image-product-2-thumbnail.jpg" alt="Ampliar segundo item da galeria."
+                        class="hover-shadow">
                 </div>
                 <div class="main-gallery__column">
-                    <img src="./assets/img/image-product-3-thumbnail.jpg" alt="" class="hover-shadow">
+                    <img src="./assets/img/image-product-3-thumbnail.jpg" alt="Ampliar terceiro item da galeria."
+                        class="hover-shadow">
                 </div>
                 <div class="main-gallery__column">
-                    <img src="./assets/img/image-product-4-thumbnail.jpg" alt="" class="hover-shadow">
+                    <img src="./assets/img/image-product-4-thumbnail.jpg" alt="Ampliar quarto item da galeria."
+                        class="hover-shadow">
                 </div>
             </div>
 
@@ -80,29 +86,37 @@
                 <span class="close cursor"></span>
                 <div class="main-modal__content">
                     <div class="main-modal__content-slide slide-alt">
-                        <img src="/assets/img/image-product-1.jpg" alt="Primeira imagem do produto">
+                        <img src="./assets/img/image-product-1.jpg"
+                            alt="Primeiro item da galeria ampliado, um par de sapatos com sola branca sobre um fundo laranja.">
                     </div>
                     <div class="main-modal__content-slide">
-                        <img src="/assets/img/image-product-2.jpg" alt="Segunda imagem do produto">
+                        <img src="./assets/img/image-product-2.jpg"
+                            alt="Segundo item da galeria ampliado, um par de sapatos brancos em cima de uma pedra branca ao lado um pequeno galho sobre um fundo laranja.">
                     </div>
                     <div class="main-modal__content-slide">
-                        <img src="/assets/img/image-product-3.jpg" alt="Terceira imagem do produto">
+                        <img src="./assets/img/image-product-3.jpg"
+                            alt="Terceiro item da galeria ampliado, um par de sapatos brancos em cima de uma pedra branca sobre um fundo laranja.">
                     </div>
                     <div class="main-modal__content-slide">
-                        <img src="/assets/img/image-product-4.jpg" alt="Quarta imagem do produto">
+                        <img src="./assets/img/image-product-4.jpg"
+                            alt="Quarto item da galeria ampliado, um par de sapatos em cima de uma pilha de pedras.">
                     </div>
                 </div>
 
-                <a class="product-page__main-gallery--prev"><img src="assets/icons/icon-previous.svg"
-                        alt="Voltar para imagem anterior"></a>
-                <a class="product-page__main-gallery--next"><img src="assets/icons/icon-next.svg"
-                        alt="Avançar para próxima página"></a>
+                <a class="product-page__main-gallery--prev"><img src="./assets/icons/icon-previous.svg"
+                        alt="Voltar para o item anterior da galeria"></a>
+                <a class="product-page__main-gallery--next"><img src="./assets/icons/icon-next.svg"
+                        alt="Avançar para o próximo item da galeria"></a>
 
                 <div class="main-gallery__column">
-                    <img src="./assets/img/image-product-1-thumbnail.jpg" alt="Imagem do produto" class="demo">
-                    <img src="./assets/img/image-product-2-thumbnail.jpg" alt="Imagem do produto" class="demo">
-                    <img src="./assets/img/image-product-3-thumbnail.jpg" alt="Imagem do produto" class="demo">
-                    <img src="./assets/img/image-product-4-thumbnail.jpg" alt="Imagem do produto" class="demo">
+                    <img src="./assets/img/image-product-1-thumbnail.jpg" alt="Ampliar primeiro item da galeria"
+                        class="demo">
+                    <img src="./assets/img/image-product-2-thumbnail.jpg" alt="Ampliar segundo item da galeria"
+                        class="demo">
+                    <img src="./assets/img/image-product-3-thumbnail.jpg" alt="Ampliar terceiro item da galeria"
+                        class="demo">
+                    <img src="./assets/img/image-product-4-thumbnail.jpg" alt="Ampliar quarto item da galeria"
+                        class="demo">
                 </div>
             </div>
         </div>
@@ -133,11 +147,13 @@
 
             <div class="product-page__cart">
                 <div class="product-page__cart-counter">
-                    <img class="cart-counter--minus" src="assets/icons/icon-minus.svg" alt="Remover uma unidade">
+                    <img class="cart-counter--minus" src="./assets/icons/icon-minus.svg"
+                        alt="Selecionar uma unidade a menos deste produto">
                     <p class="cart-counter__number">0</p>
-                    <img class="cart-counter--plus" src="assets/icons/icon-plus.svg" alt="Adicionar uma unidade">
+                    <img class="cart-counter--plus" src="./assets/icons/icon-plus.svg"
+                        alt="Selecionar uma unidade a mais deste produto">
                 </div>
-                <button class="button"><img src="assets/icons/icon-cart.svg">Add to cart</button>
+                <button class="button"><img src="assets/icons/icon-cart.svg" alt>Add to cart</button>
             </div>
         </div>
 
