@@ -170,10 +170,16 @@
 .product-page__main {
   margin-top: 4.2rem;
 }
+.product-page__main-gallery .main-gallery__demo {
+  display: none;
+}
 .product-page__main-gallery .main-gallery__row {
   display: none;
 }
 .product-page__main-gallery .main-gallery__column {
+  display: none;
+}
+.product-page__main-modal .close {
   display: none;
 }
 .product-page__main-modal .main-modal__content {
@@ -201,6 +207,10 @@
   top: 190px;
   margin: 0 1rem;
   border-radius: 50%;
+  border: none;
+  width: 50px;
+  height: 50px;
+  background: none;
   background-color: hsl(0, 0%, 100%);
 }
 .product-page__main-modal .product-page__main-gallery--prev img,
@@ -225,36 +235,81 @@
     width: 50%;
     position: relative;
   }
-  .product-page__main .product-page__main-gallery img {
-    width: 70%;
+  .product-page__main .product-page__main-gallery .main-gallery__container {
+    margin: auto;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 18px;
+    width: 80%;
+    cursor: zoom-in;
+  }
+  .product-page__main .product-page__main-gallery .main-gallery__container:hover {
+    border-color: hsl(26, 100%, 55%);
+    background-color: hsl(26, 100%, 55%);
+  }
+  .product-page__main .product-page__main-gallery .main-gallery__container .main-gallery__demo {
+    display: block;
+    width: 100%;
     border-radius: 15px;
+  }
+  .product-page__main .product-page__main-gallery .main-gallery__container:hover::after {
+    content: "";
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.6;
   }
   .product-page__main .product-page__main-gallery .main-gallery__row {
     display: flex;
     width: 80%;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
+    padding: 1rem;
   }
   .product-page__main .product-page__main-gallery .main-gallery__column {
     display: flex;
     width: 17.5%;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 12px;
+    width: 80%;
+    cursor: pointer;
+  }
+  .product-page__main .product-page__main-gallery .main-gallery__column:hover {
+    border-color: hsl(26, 100%, 55%);
+    background-color: hsl(26, 100%, 55%);
+  }
+  .product-page__main .product-page__main-gallery .main-gallery__column:hover::after {
+    content: "";
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
   }
   .product-page__main .product-page__main-gallery .main-gallery__column img {
     width: 100%;
-    height: 80%;
     border-radius: 10px;
-    margin-top: 1rem;
-    border: 2px solid hsl(0, 0%, 100%);
   }
-  .product-page__main .product-page__main-gallery .main-gallery__column img:hover {
-    filter: opacity(80%);
-    cursor: pointer;
+  .product-page__main .active {
+    position: relative;
+    box-shadow: 0 0 0 3px hsl(26, 97%, 59%);
   }
-  .product-page__main .product-page__main-gallery .main-gallery__column img:hover {
-    border: 2px solid orangered;
+  .product-page__main .active::after {
+    content: "";
+    background-color: hsl(26, 97%, 59%);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;
   }
   .product-page__main .product-page__main-modal {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     left: 0;
@@ -264,10 +319,28 @@
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.9);
   }
+  .product-page__main .product-page__main-modal .close {
+    display: block;
+    background: none;
+    border: none;
+    width: 4%;
+    height: 4%;
+    position: fixed;
+    right: 0;
+    top: 15px;
+    cursor: pointer;
+  }
+  .product-page__main .product-page__main-modal .close img {
+    width: 50%;
+    filter: brightness(1000%);
+  }
+  .product-page__main .product-page__main-modal .close:hover img {
+    filter: hue-rotate(150deg) saturate(1000%) brightness(175%);
+  }
   .product-page__main .product-page__main-modal .main-modal__content {
     position: relative;
     margin: auto;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
   }
   .product-page__main .product-page__main-modal .main-modal__content img {
     border-radius: 15px;
@@ -280,29 +353,43 @@
     -o-object-position: center;
        object-position: center;
   }
-  .product-page__main .product-page__main-modal .main-gallery__column {
-    margin: auto;
-    width: auto;
-    gap: 1.5rem;
+  .product-page__main .product-page__main-modal .main-modal-thumb__container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    gap: 1rem;
   }
-  .product-page__main .product-page__main-modal .main-gallery__column .demo {
-    width: 40%;
-    height: 40%;
-    border-color: rgba(0, 0, 0, 0.1);
+  .product-page__main .product-page__main-modal .main-gallery__column {
+    gap: 1.5rem;
+    width: 90px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
   }
   .product-page__main .product-page__main-modal .product-page__main-gallery--next,
   .product-page__main .product-page__main-modal .product-page__main-gallery--prev {
     display: flex;
     position: fixed;
     top: 240px;
-    height: 3%;
-    width: 1%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
   }
   .product-page__main .product-page__main-modal .product-page__main-gallery--next img,
   .product-page__main .product-page__main-modal .product-page__main-gallery--prev img {
-    width: 90%;
-    height: 90%;
+    width: 15px;
+    height: 20px;
     margin: auto;
+  }
+  .product-page__main .product-page__main-modal .product-page__main-gallery--next:hover,
+  .product-page__main .product-page__main-modal .product-page__main-gallery--prev:hover {
+    background-color: lightgrey;
+  }
+  .product-page__main .product-page__main-modal .product-page__main-gallery--next:active,
+  .product-page__main .product-page__main-modal .product-page__main-gallery--prev:active {
+    background-color: hsl(26, 100%, 55%);
+  }
+  .product-page__main .product-page__main-modal .product-page__main-gallery--next:active img,
+  .product-page__main .product-page__main-modal .product-page__main-gallery--prev:active img {
+    filter: brightness(1000%);
   }
   .product-page__main .product-page__main-modal .product-page__main-gallery--next {
     right: 300px;

@@ -4,6 +4,10 @@
     margin-top: 4.2rem;
 
     &-gallery {
+        .main-gallery__demo {
+            display: none;
+        }
+
         .main-gallery__row {
             display: none;
         }
@@ -14,6 +18,10 @@
     }
 
     &-modal {
+        .close {
+            display: none;
+        }
+
         .main-modal__content {
             position: relative;
 
@@ -46,6 +54,10 @@
             top: 190px;
             margin: 0 1rem;
             border-radius: 50%;
+            border: none;
+            width: 50px;
+            height: 50px;
+            background: none;
             background-color: variables.$first-basic-color;
 
             img {
@@ -78,43 +90,96 @@
                 width: 50%;
                 position: relative;
 
-                img {
-                    width: 70%;
-                    border-radius: 15px;
+                .main-gallery__container {
+                    margin: auto;
+                    position: relative;
+                    border: 3px solid white;
+                    border-radius: 18px;
+                    width: 80%;
+                    cursor: zoom-in;
+
+                    &:hover {
+                        border-color: variables.$primary-color;
+                        background-color: variables.$primary-color;
+                    }
+
+                    .main-gallery__demo {
+                        display: block;
+                        width: 100%;
+                        border-radius: 15px;
+                    }
+
+                    &:hover::after {
+                        content: "";
+                        background-color: variables.$first-basic-color;
+                        border-radius: 15px;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        opacity: 0.6;
+                    }
                 }
 
                 .main-gallery__row {
                     display: flex;
                     width: 80%;
-                    gap: 1.5rem;
+                    gap: 1rem;
                     justify-content: center;
+                    padding: 1rem;
+
                 }
 
                 .main-gallery__column {
                     display: flex;
                     width: 17.5%;
+                    position: relative;
+                    border: 3px solid white;
+                    border-radius: 12px;
+                    width: 80%;
+                    cursor: pointer;
+
+                    &:hover {
+                        border-color: variables.$primary-color;
+                        background-color: variables.$primary-color;
+                    }
+
+                    &:hover::after {
+                        content: "";
+                        background-color: variables.$first-basic-color;
+                        border-radius: 10px;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        opacity: 0.6;
+                    }
+
 
                     img {
                         width: 100%;
-                        height: 80%;
                         border-radius: 10px;
-                        margin-top: 1rem;
-                        border: 2px solid variables.$first-basic-color;
-
-                        &:hover {
-                            filter: opacity(80%);
-                            cursor: pointer;
-                        }
-
-                        &:hover {
-                            border: 2px solid orangered;
-                        }
                     }
                 }
             }
 
+            .active {
+                position: relative;
+                box-shadow: 0 0 0 3px variables.$primary-color-hover;
+
+                &::after {
+                    content: "";
+
+                    background-color: variables.$primary-color-hover;
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    opacity: 0.6;
+                }
+            }
+
             .product-page__main-modal {
-                display: flex;
+                display: none;
                 flex-direction: column;
                 position: fixed;
                 left: 0;
@@ -124,10 +189,33 @@
                 z-index: 1;
                 background-color: rgba(0, 0, 0, .9);
 
+                .close {
+                    display: block;
+                    background: none;
+                    border: none;
+                    width: 4%;
+                    height: 4%;
+                    position: fixed;
+                    right: 0;
+                    top: 15px;
+                    cursor: pointer;
+
+                    img {
+                        width: 50%;
+                        filter: brightness(1000%);
+                    }
+
+                    &:hover {
+                        img {
+                            filter: hue-rotate(150deg) saturate(1000%) brightness(175%);
+                        }
+                    }
+                }
+
                 .main-modal__content {
                     position: relative;
                     margin: auto;
-                    padding-top: 2rem;
+                    padding-top: .5rem;
 
                     img {
                         border-radius: 15px;
@@ -145,17 +233,17 @@
                     }
                 }
 
+                .main-modal-thumb__container {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 2rem;
+                    gap: 1rem;
+                }
+
                 .main-gallery__column {
-                    margin: auto;
-                    width: auto;
                     gap: 1.5rem;
-
-                    .demo {
-                        width: 40%;
-                        height: 40%;
-                        border-color: rgba(0, 0, 0, .1);
-                    }
-
+                    width: 90px;
+                    border: 3px solid rgba(0, 0, 0, .1);
                 }
 
 
@@ -164,13 +252,26 @@
                     display: flex;
                     position: fixed;
                     top: 240px;
-                    height: 3%;
-                    width: 1%;
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
 
                     img {
-                        width: 90%;
-                        height: 90%;
+                        width: 15px;
+                        height: 20px;
                         margin: auto;
+                    }
+
+                    &:hover {
+                        background-color: lightgrey;
+                    }
+
+                    &:active {
+                        background-color: variables.$primary-color;
+
+                        img {
+                            filter: brightness(1000%);
+                        }
                     }
 
                 }

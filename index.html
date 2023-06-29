@@ -61,64 +61,92 @@
     </header>
     <main class="product-page__main">
         <div class="product-page__main-gallery">
-            <img src="./assets/img/image-product-1.jpg"
-                alt="Galeria do produto, um par de sapatos com sola branca sobre um fundo laranja.">
+            <div class="main-gallery__container" data-enter>
+                <img class="main-gallery__demo" src="./assets/img/image-product-1.jpg"
+                    alt="Galeria do produto, um par de sapatos com sola branca sobre um fundo laranja.">
+            </div>
+            <div class="main-gallery__container" data-enter>
+                <img class="main-gallery__demo" src="./assets/img/image-product-2.jpg"
+                    alt="Galeria do produto, um par de sapatos com sola branca sobre um fundo laranja.">
+            </div>
+            <div class="main-gallery__container" data-enter>
+                <img class="main-gallery__demo" src="./assets/img/image-product-3.jpg"
+                    alt="Galeria do produto, um par de sapatos com sola branca sobre um fundo laranja.">
+            </div>
+            <div class="main-gallery__container" data-enter>
+                <img class="main-gallery__demo" src="./assets/img/image-product-4.jpg"
+                    alt="Galeria do produto, um par de sapatos com sola branca sobre um fundo laranja.">
+            </div>
             <div class="main-gallery__row">
-                <div class="main-gallery__column">
+                <div class="main-gallery__column" data-thumb>
                     <img src="./assets/img/image-product-1-thumbnail.jpg" alt="Ampliar primeiro item da galeria."
                         class="hover-shadow">
                 </div>
-                <div class="main-gallery__column">
+                <div class="main-gallery__column" data-thumb>
                     <img src="./assets/img/image-product-2-thumbnail.jpg" alt="Ampliar segundo item da galeria."
                         class="hover-shadow">
                 </div>
-                <div class="main-gallery__column">
+                <div class="main-gallery__column" data-thumb>
                     <img src="./assets/img/image-product-3-thumbnail.jpg" alt="Ampliar terceiro item da galeria."
                         class="hover-shadow">
                 </div>
-                <div class="main-gallery__column">
+                <div class="main-gallery__column" data-thumb>
                     <img src="./assets/img/image-product-4-thumbnail.jpg" alt="Ampliar quarto item da galeria."
                         class="hover-shadow">
                 </div>
             </div>
 
-            <div id="modal" class="product-page__main-modal">
-                <span class="close cursor"></span>
+            <div id="modal" class="product-page__main-modal" data-modal>
+                <button class="close cursor" data-exit>
+                    <img src="./assets/icons/icon-close.svg" alt="Fechar a galeria">
+                </button>
                 <div class="main-modal__content">
-                    <div class="main-modal__content-slide slide-alt">
+                    <div class="main-modal__content-slide slide-alt" data-lightbox>
                         <img src="./assets/img/image-product-1.jpg"
                             alt="Primeiro item da galeria ampliado, um par de sapatos com sola branca sobre um fundo laranja.">
                     </div>
-                    <div class="main-modal__content-slide">
+                    <div class="main-modal__content-slide" data-lightbox>
                         <img src="./assets/img/image-product-2.jpg"
                             alt="Segundo item da galeria ampliado, um par de sapatos brancos em cima de uma pedra branca ao lado um pequeno galho sobre um fundo laranja.">
                     </div>
-                    <div class="main-modal__content-slide">
+                    <div class="main-modal__content-slide" data-lightbox>
                         <img src="./assets/img/image-product-3.jpg"
                             alt="Terceiro item da galeria ampliado, um par de sapatos brancos em cima de uma pedra branca sobre um fundo laranja.">
                     </div>
-                    <div class="main-modal__content-slide">
+                    <div class="main-modal__content-slide" data-lightbox>
                         <img src="./assets/img/image-product-4.jpg"
                             alt="Quarto item da galeria ampliado, um par de sapatos em cima de uma pilha de pedras.">
                     </div>
                 </div>
 
-                <a class="product-page__main-gallery--prev"><img src="./assets/icons/icon-previous.svg"
-                        alt="Voltar para o item anterior da galeria"></a>
-                <a class="product-page__main-gallery--next"><img src="./assets/icons/icon-next.svg"
-                        alt="Avançar para o próximo item da galeria"></a>
+                <button class="product-page__main-gallery--prev">
+                    <img src="./assets/icons/icon-previous.svg" alt="Voltar para o item anterior da galeria">
+                </button>
+                <button class="product-page__main-gallery--next">
+                    <img src="./assets/icons/icon-next.svg" alt="Avançar para o próximo item da galeria">
+                </button>
 
-                <div class="main-gallery__column">
-                    <img src="./assets/img/image-product-1-thumbnail.jpg" alt="Ampliar primeiro item da galeria"
-                        class="demo">
-                    <img src="./assets/img/image-product-2-thumbnail.jpg" alt="Ampliar segundo item da galeria"
-                        class="demo">
-                    <img src="./assets/img/image-product-3-thumbnail.jpg" alt="Ampliar terceiro item da galeria"
-                        class="demo">
-                    <img src="./assets/img/image-product-4-thumbnail.jpg" alt="Ampliar quarto item da galeria"
-                        class="demo">
+                <div class="main-modal-thumb__container">
+                    <div class="main-gallery__column">
+                        <img src="./assets/img/image-product-1-thumbnail.jpg" alt="Ampliar primeiro item da galeria"
+                            class="demo">
+                    </div>
+                    <div class="main-gallery__column">
+                        <img src="./assets/img/image-product-2-thumbnail.jpg" alt="Ampliar segundo item da galeria"
+                            class="demo">
+                    </div>
+                    <div class="main-gallery__column">
+                        <img src="./assets/img/image-product-3-thumbnail.jpg" alt="Ampliar terceiro item da galeria"
+                            class="demo">
+                    </div>
+                    <div class="main-gallery__column">
+                        <img src="./assets/img/image-product-4-thumbnail.jpg" alt="Ampliar quarto item da galeria"
+                            class="demo">
+                    </div>
                 </div>
             </div>
+
+        </div>
         </div>
 
         <!-- <div class="product-page__lightbox">
