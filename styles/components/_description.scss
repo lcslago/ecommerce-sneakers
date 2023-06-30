@@ -75,19 +75,26 @@
     @media screen {
         @media (min-width: variables.$desktop-width) {
             display: flex;
+            gap: 3rem;
             justify-content: space-between;
             padding: 0rem 12rem 0 12rem;
 
             .product-page__cart {
                 display: flex;
                 align-items: center;
-                gap: 2rem;
+                gap: 1rem;
+                margin: 2rem 1rem;
             }
 
             .product-page__main__left-container {
                 width: 50%;
 
                 .product-page__main-description {
+                    .product-name {
+                        font-size: 2.5rem;
+                        padding: 1rem 1rem .5rem 1rem;
+                    }
+
                     .main-description__price {
                         flex-direction: column;
                         align-items: start;

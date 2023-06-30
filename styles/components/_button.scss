@@ -39,6 +39,8 @@
         @media (min-width: variables.$desktop-width) {
             .button {
                 margin: 0;
+                padding: 1.3rem;
+                font-size: 1rem;
             }
         }
     }

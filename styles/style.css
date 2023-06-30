@@ -458,16 +458,22 @@
 @media screen and (min-width: 1280px) {
   .product-page__main {
     display: flex;
+    gap: 3rem;
     justify-content: space-between;
     padding: 0rem 12rem 0 12rem;
   }
   .product-page__main .product-page__cart {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    margin: 2rem 1rem;
   }
   .product-page__main .product-page__main__left-container {
     width: 50%;
+  }
+  .product-page__main .product-page__main__left-container .product-page__main-description .product-name {
+    font-size: 2.5rem;
+    padding: 1rem 1rem 0.5rem 1rem;
   }
   .product-page__main .product-page__main__left-container .product-page__main-description .main-description__price {
     flex-direction: column;
@@ -502,9 +508,10 @@
 }
 @media screen and (min-width: 1280px) {
   .product-page__cart-counter {
-    padding: 0;
+    padding: 1rem 0.5rem;
     margin: 0;
     gap: 2rem;
+    width: 250px;
   }
 }
 
@@ -541,5 +548,7 @@
 @media screen and (min-width: 1280px) {
   .product-page__cart .button {
     margin: 0;
+    padding: 1.3rem;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

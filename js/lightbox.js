@@ -7,19 +7,19 @@
         thumbnailModal[slideIndex].classList.toggle("active");
         thumbnailModal[slideIndex + 1].classList.remove("active");
     })
-
     next.addEventListener("click", () => {
         plusSlides(1);
         thumbnailModal[slideIndex].classList.toggle("active");
         thumbnailModal[slideIndex - 1].classList.remove("active");
     })
+    preventContextMenu(prev);
+    preventContextMenu(next);
 })();
 
 const thumbnailModal = document.querySelectorAll('[data-thumbmodal]');
 
 function showSlides(n) {
     let slides = document.getElementsByClassName("main-modal__content-slide");
-
 
     if (n >= slides.length) {
         slideIndex = 0;
@@ -33,7 +33,18 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     slides[slideIndex].style.display = "block";
+    relateModalAndMain();
+}
 
+function plusSlides(n) {
+    slideIndex += n
+    showSlides(slideIndex);
+}
+
+let slideIndex = 0;
+showSlides(slideIndex);
+
+(function () {
     for (let i = 0; i < thumbnailModal.length; i++) {
         thumbnailModal[i].addEventListener('click', () => {
             slideIndex = i;
@@ -45,18 +56,11 @@ function showSlides(n) {
         })
 
     }
+})()
 
-    relateModalAndMain();
-}
-
-function plusSlides(n) {
-    slideIndex += n
-    showSlides(slideIndex);
-
-}
-
-let slideIndex = 0;
-showSlides(slideIndex);
+thumbnailModal.forEach(thumbnail => {
+    preventContextMenu(thumbnail);
+})
 
 const galleryModal = document.querySelector('[data-modal]');
 
@@ -73,7 +77,6 @@ function relateModalAndMain() {
 
             for (let j = 0; j < lightboxOpened.length; j++) {
                 lightboxOpened[j].style.display = "none";
-
             }
             lightboxOpened[i].style.display = "flex";
 
@@ -82,25 +85,23 @@ function relateModalAndMain() {
 }
 
 const closeButton = document.querySelector('[data-exit]');
+preventContextMenu(closeButton);
 closeButton.addEventListener('click', () => {
     galleryModal.style.display = "none";
     for (let i = 0; i < thumbnailModal.length; i++) {
         thumbnailModal[i].classList.remove("active");
-
     }
-
 })
-closeButton.addEventListener('contextmenu', (e) => { e.preventDefault() })
 
 const mainGalleryThumbnails = document.querySelectorAll('[data-thumb]');
 const mainGallerySlides = document.querySelectorAll(".main-gallery__container");
 
 (function () {
-    for (let i = 0; i < mainGallerySlides.length; i++) {
-        mainGallerySlides[i].style.display = "none";
-    }
+    // for (let i = 0; i < mainGallerySlides.length; i++) {
+    //     mainGallerySlides[i].style.display = "none";
+    // }
 
-    mainGallerySlides[0].style.display = "flex";
+    // mainGallerySlides[0].style.display = "flex";
 
     for (let i = 0; i < mainGalleryThumbnails.length; i++) {
         mainGalleryThumbnails[i].addEventListener('click', () => {
@@ -113,3 +114,14 @@ const mainGallerySlides = document.querySelectorAll(".main-gallery__container");
         })
     }
 })();
+
+mainGallerySlides.forEach(slide => {
+    preventContextMenu(slide);
+});
+mainGalleryThumbnails.forEach(thumbnail => {
+    preventContextMenu(thumbnail);
+})
+
+function preventContextMenu(element) {
+    element.addEventListener('contextmenu', (e) => { e.preventDefault() });
+}
