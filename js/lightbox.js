@@ -71,8 +71,6 @@ function relateModalAndMain() {
     for (let i = 0; i < openGallery.length; i++) {
         openGallery[i].addEventListener('click', () => {
             galleryModal.style.display = "flex";
-            slideIndex = i;
-            showSlides(slideIndex);
             thumbnailModal[i].classList.add("active");
 
             for (let j = 0; j < lightboxOpened.length; j++) {
@@ -83,6 +81,18 @@ function relateModalAndMain() {
         })
     };
 }
+
+(function () {
+    const openGallery = document.querySelectorAll('[data-enter]');
+    for (let i = 0; i < openGallery.length; i++) {
+        openGallery[i].addEventListener('click', () => {
+            slideIndex = i;
+            showSlides(slideIndex);
+        })
+    }
+})();
+
+
 
 const closeButton = document.querySelector('[data-exit]');
 preventContextMenu(closeButton);
@@ -97,12 +107,6 @@ const mainGalleryThumbnails = document.querySelectorAll('[data-thumb]');
 const mainGallerySlides = document.querySelectorAll(".main-gallery__container");
 
 (function () {
-    // for (let i = 0; i < mainGallerySlides.length; i++) {
-    //     mainGallerySlides[i].style.display = "none";
-    // }
-
-    // mainGallerySlides[0].style.display = "flex";
-
     for (let i = 0; i < mainGalleryThumbnails.length; i++) {
         mainGalleryThumbnails[i].addEventListener('click', () => {
             for (let j = 0; j < mainGallerySlides.length; j++) {
