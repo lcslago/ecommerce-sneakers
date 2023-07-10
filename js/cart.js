@@ -136,3 +136,11 @@ function deleteCart() {
         cartEmpty.style.display = "grid";
     })
 }
+
+const preventDefault = [cartButton, minus, plus, button];
+for (const event of preventDefault) {
+    event.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+    })
+}
+

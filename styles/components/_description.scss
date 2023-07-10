@@ -78,6 +78,7 @@
             gap: 3rem;
             justify-content: space-between;
             padding: 0rem 12rem 0 12rem;
+            margin: 2.5rem 0;
 
             .product-page__cart {
                 display: flex;
@@ -98,6 +99,16 @@
                     .main-description__price {
                         flex-direction: column;
                         align-items: start;
+
+                        h5 {
+                            font-size: 1rem;
+                        }
+
+                        &-discount {
+                            h5 {
+                                padding: .3rem .5rem;
+                            }
+                        }
                     }
                 }
             }

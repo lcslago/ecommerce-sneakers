@@ -42,6 +42,7 @@
             font-weight: 700;
             color: variables.$first-basic-color;
             display: none;
+            cursor: default;
         }
 
         .header__cart-items {
@@ -58,7 +59,8 @@
             width: 300px;
             display: none;
             padding: .5rem 0;
-            box-shadow: 15px 15px 15px -15px variables.$second-basic-color;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+                0 8px 10px -6px rgb(0 0 0 / 0.1);
 
             .header__cart-empty {
                 display: grid;
@@ -130,14 +132,6 @@
                     margin-left: 6.3rem;
                     margin-top: 4rem;
                 }
-
-                &--delete {
-                    position: absolute;
-                    padding-right: 1rem;
-                    padding-bottom: 1.3rem;
-                    bottom: 0;
-                    right: 0;
-                }
             }
 
             .cart__overview {
@@ -166,6 +160,63 @@
     @media (min-width: variables.$desktop-width) {
         .product-page__header {
             position: relative;
+            border-bottom: 1px solid variables.$tertiary-color;
+            width: 70%;
+            padding: 1.5rem 0;
+            margin: auto;
+
+            .header__hamburger-menu {
+                display: none;
+            }
+
+            .header__logo,
+            .header__avatar {
+                margin: 0;
+            }
+
+            .header__avatar {
+                width: 45px;
+            }
+
+            .header__right {
+                gap: 1.5rem;
+
+                .header__cart-count {
+                    margin-right: 4.5rem;
+                    margin-top: 1.7rem;
+                }
+
+                .header__cart-items {
+                    margin-top: 5.90rem;
+                    margin-right: 4rem;
+                    border: 1px solid variables.$tertiary-color;
+                    border-top: none;
+
+                    .header__cart-empty {
+                        grid-template-rows: 60%;
+
+                        p {
+                            align-self: self-start;
+                        }
+                    }
+
+                    .header__cart-product {
+                        height: 34%;
+
+                        &--delete {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .cart__overview {
+                        margin: 6rem 0 0 0;
+                    }
+                }
+            }
+
+            .header__cart-img {
+                cursor: pointer;
+            }
         }
     }
 }

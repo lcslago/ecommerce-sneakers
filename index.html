@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
             <nav class="header__cart">
                 <nav class="header__cart--menu">
                     <img class="header__cart-img" id="cart" src="./assets/icons/icon-cart.svg"
-                        alt="Verificar conteúdos do carrinho de compras">
+                        alt="Verificar conteúdos do carrinho de compras" title="Abrir carrinho">
                     <span class="header__cart-count">0</span>
                     <ul class="header__cart-items" id="cartmenu">
                         <div class="header__cart-empty">
@@ -34,28 +34,26 @@
                         <li class="header__cart-product">
                             <nav class="cart-product__left">
                                 <span class="item__name">product</span>
-
                             </nav>
                             <nav class="cart-product__right">
                                 <span class="item__price">price</span>
                                 <span class="item__quantity">quantity</span>
-
+                                <img class="header__cart-product--delete" id="delete"
+                                    src="./assets/icons/icon-delete.svg" alt="Remover item do carrinho"
+                                    title="Remover item do carrinho">
                             </nav>
-                            <img class="header__cart-product--delete" id="delete" src="./assets/icons/icon-delete.svg"
-                                alt="Remover item do carrinho">
+
                         </li>
                         <nav class="cart__overview">
                             <span>Total:</span>
                             <span class="cart__total--sum">0</span>
                         </nav>
                     </ul>
-
                 </nav>
             </nav>
             <nav>
                 <img class="header__avatar" src="./assets/img/image-avatar.png" alt="Avatar do usuário">
             </nav>
-
         </nav>
 
     </header>
@@ -149,10 +147,6 @@
         </div>
         </div>
 
-        <!-- <div class="product-page__lightbox">
-            <img src="./assets/img/image-product-1.jpg" alt="">
-        </div> -->
-
         <div class="product-page__main__left-container">
             <section class="product-page__main-description">
                 <h5>Sneaker Company</h5>
@@ -176,10 +170,10 @@
             <div class="product-page__cart">
                 <div class="product-page__cart-counter">
                     <img class="cart-counter--minus" src="./assets/icons/icon-minus.svg"
-                        alt="Selecionar uma unidade a menos deste produto">
+                        alt="Selecionar uma unidade a menos deste produto" title="Remover uma unidade">
                     <p class="cart-counter__number">0</p>
                     <img class="cart-counter--plus" src="./assets/icons/icon-plus.svg"
-                        alt="Selecionar uma unidade a mais deste produto">
+                        alt="Selecionar uma unidade a mais deste produto" title="Adicionar uma unidade">
                 </div>
                 <button class="button"><img src="assets/icons/icon-cart.svg" alt>Add to cart</button>
             </div>

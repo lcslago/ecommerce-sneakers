@@ -7,20 +7,20 @@
     height: 100vh;
 }
 
-@media screen {
-    @media (min-width: variables.$desktop-width) {
-        .product-page_lightbox {
-            position: relative;
+// @media screen {
+//     @media (min-width: variables.$desktop-width) {
+//         .product-page_lightbox {
+//             position: relative;
 
-            &::after {
-                content: "";
-                background-color: black;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                opacity: 0.8;
-            }
-        }
-    }
-}
+//             &::after {
+//                 content: "";
+//                 background-color: black;
+//                 width: 100%;
+//                 height: 100%;
+//                 position: absolute;
+//                 top: 0;
+//                 opacity: 0.8;
+//             }
+//         }
+//     }
+// }
