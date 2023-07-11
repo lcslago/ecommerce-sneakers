@@ -31,6 +31,11 @@
         display: flex;
         align-items: center;
 
+        .open-cart--button {
+            background-color: transparent;
+            border: none;
+        }
+
         .header__cart-count {
             position: absolute;
             right: 0;
@@ -46,7 +51,6 @@
             font-weight: 700;
             color: variables.$first-basic-color;
             display: none;
-            cursor: default;
         }
 
         .header__cart-items {
@@ -166,7 +170,7 @@
             position: relative;
             border-bottom: 1px solid variables.$tertiary-color;
             width: 70%;
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             margin: auto;
 
             .header__hamburger-menu {
@@ -204,7 +208,7 @@
 
                 .header__cart-count {
                     margin-right: 4.5rem;
-                    margin-top: 1.7rem;
+                    margin-top: 1.25rem;
                 }
 
                 .header__cart-items {
@@ -235,7 +239,7 @@
                 }
             }
 
-            .header__cart-img {
+            .open-cart--button {
                 cursor: pointer;
             }
         }

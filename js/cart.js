@@ -99,7 +99,7 @@ function saveCartNumber() {
 
 function showCartMenu() {
     document.addEventListener("click", (e) => {
-        if (e.target.matches('#cart')) {
+        if (e.target.matches('#cartbutton')) {
             cartMenu.classList.toggle("show");
         } else if (e.target.closest('#cartmenu')) {
             cartMenu.classList.add("show");
