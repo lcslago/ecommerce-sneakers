@@ -22,6 +22,9 @@
   pointer-events: none;
   margin: 0 0.5rem;
 }
+.product-page__header--nav {
+  display: none;
+}
 .product-page__header .header__avatar {
   width: 25px;
   margin: 0 0.5rem;
@@ -152,6 +155,20 @@
   }
   .product-page__header .header__hamburger-menu {
     display: none;
+  }
+  .product-page__header .header__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+  .product-page__header--nav {
+    display: flex;
+    gap: 2rem;
+  }
+  .product-page__header--nav a {
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
   }
   .product-page__header .header__logo,
   .product-page__header .header__avatar {

@@ -18,6 +18,10 @@
         margin: 0 .5rem;
     }
 
+    &--nav {
+        display: none;
+    }
+
     .header__avatar {
         width: 25px;
         margin: 0 .5rem;
@@ -167,6 +171,23 @@
 
             .header__hamburger-menu {
                 display: none;
+            }
+
+            .header__left {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 3rem;
+            }
+
+            &--nav {
+                display: flex;
+                gap: 2rem;
+
+                a {
+                    text-decoration: none;
+                    color: variables.$secondary-color;
+                }
             }
 
             .header__logo,
