@@ -247,8 +247,7 @@
                 }
 
 
-                .product-page__main-gallery--next,
-                .product-page__main-gallery--prev {
+                .gallery-buttons {
                     display: flex;
                     position: fixed;
                     top: 240px;
@@ -274,6 +273,14 @@
                         }
                     }
 
+                }
+
+                .gallery-buttons--active {
+                    background-color: variables.$primary-color;
+
+                    img {
+                        filter: brightness(1000%);
+                    }
                 }
 
                 .product-page__main-gallery--next {

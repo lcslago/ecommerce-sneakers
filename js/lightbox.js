@@ -2,39 +2,47 @@
     let prev = document.querySelector(".product-page__main-gallery--prev");
     let next = document.querySelector(".product-page__main-gallery--next");
 
+
     prev.addEventListener("click", () => {
-    	navigateGallery(-1);
-		})
-	navigateGalleryWithKeys('ArrowLeft', -1);
+        navigateGallery(-1);
+    })
+    navigateGalleryWithKeys('ArrowLeft', -1, prev);
 
     next.addEventListener("click", () => {
-    	navigateGallery(1);
-		})
-	navigateGalleryWithKeys('ArrowRight', 1);
+        navigateGallery(1);
+    })
+    navigateGalleryWithKeys('ArrowRight', 1, next);
 
     preventContextMenu(prev);
     preventContextMenu(next);
 })();
 
-function navigateGalleryWithKeys(keyPressed, indexNavigation) {
-	window.addEventListener('keydown', (e) => {
-		if (e.key === keyPressed) {
-			navigateGallery(indexNavigation);
-		}
-	})
+function navigateGalleryWithKeys(keyPressed, indexNavigation, button) {
+    window.addEventListener('keydown', (e) => {
+        if (e.key === keyPressed) {
+            navigateGallery(indexNavigation, button);
+        }
+    })
+
+    window.addEventListener('keyup', (e) => {
+        if (e.key === keyPressed) {
+            button.classList.remove("gallery-buttons--active");
+        }
+    })
 }
 
-function navigateGallery(indexNavigation) {
-	plusSlides(indexNavigation);
-	thumbnailModal[slideIndex].classList.toggle("active");
+function navigateGallery(indexNavigation, button) {
+    plusSlides(indexNavigation);
+    thumbnailModal[slideIndex].classList.toggle("active");
+    button.classList.toggle("gallery-buttons--active");
 
-	if (indexNavigation === -1) {
-		thumbnailModal[slideIndex + 1].classList.remove("active");
-	}
+    if (indexNavigation === -1) {
+        thumbnailModal[slideIndex + 1].classList.remove("active");
+    }
 
-	if (indexNavigation === 1) {
-		thumbnailModal[slideIndex - 1].classList.remove("active");
-	}
+    if (indexNavigation === 1) {
+        thumbnailModal[slideIndex - 1].classList.remove("active");
+    }
 }
 
 const thumbnailModal = document.querySelectorAll('[data-thumbmodal]');
@@ -115,9 +123,9 @@ function relateModalAndMain() {
 })();
 
 window.addEventListener('keydown', (e) => {
-	if (e.key === "Escape") {
-		galleryModal.style.display = "none";
-	}
+    if (e.key === "Escape") {
+        galleryModal.style.display = "none";
+    }
 })
 
 const closeButton = document.querySelector('[data-exit]');
