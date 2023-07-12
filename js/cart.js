@@ -12,7 +12,7 @@ let button = document.querySelector(".button");
 
 let counterNotification = document.querySelector(".header__cart-count");
 
-const cartButton = document.querySelector("#cart");
+const cartButton = document.querySelector("#cartbutton");
 
 const cartMenu = document.querySelector(".header__cart-items");
 
