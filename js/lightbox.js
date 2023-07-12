@@ -4,12 +4,12 @@
 
 
     prev.addEventListener("click", () => {
-        navigateGallery(-1);
+        navigateGallery(-1, button);
     })
     navigateGalleryWithKeys('ArrowLeft', -1, prev);
 
     next.addEventListener("click", () => {
-        navigateGallery(1);
+        navigateGallery(1, button);
     })
     navigateGalleryWithKeys('ArrowRight', 1, next);
 
