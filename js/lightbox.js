@@ -125,6 +125,7 @@ function relateModalAndMain() {
 window.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
         galleryModal.style.display = "none";
+        removeThumbnailOverlay();
     }
 })
 
@@ -132,9 +133,7 @@ const closeButton = document.querySelector('[data-exit]');
 preventContextMenu(closeButton);
 closeButton.addEventListener('click', () => {
     galleryModal.style.display = "none";
-    for (let i = 0; i < thumbnailModal.length; i++) {
-        thumbnailModal[i].classList.remove("active");
-    }
+    removeThumbnailOverlay();
 })
 
 const mainGalleryThumbnails = document.querySelectorAll('[data-thumb]');
@@ -162,4 +161,10 @@ mainGalleryThumbnails.forEach(thumbnail => {
 
 function preventContextMenu(element) {
     element.addEventListener('contextmenu', (e) => { e.preventDefault() });
+}
+
+function removeThumbnailOverlay() {
+    thumbnailModal.forEach(thumbnail => {
+        thumbnail.classList.remove("active");
+    })
 }
